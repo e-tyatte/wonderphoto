@@ -27,7 +27,7 @@ async def create_command(update, context):
     session.mode = "create"
     text = load_message(session.mode)
     await send_photo(update, context, session.mode)
-    await send_text_buttons(update, context, {
+    await send_text_buttons(update, context, text,{
         "create_anime":"👧🏻 Аниме",
         "create_photo":"📸 Фото",
     }, checkbox_key=session.image_type)
